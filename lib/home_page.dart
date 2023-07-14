@@ -21,6 +21,12 @@ class HomePage extends StatelessWidget {
                 Get.toNamed('/basico');
               },
             ),
+            ElevatedButtonCustom(
+              text: 'Tipos Reativos',
+              onPressed: () {
+                Get.toNamed('/tiposReativos');
+              },
+            ),
           ],
         ),
       ),
