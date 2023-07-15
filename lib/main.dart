@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_state_manager/basico/reatividade_page.dart';
 import 'package:get_state_manager/home_page.dart';
+import 'package:get_state_manager/tipos/tipos_reativos_genericos_page.dart';
 import 'package:get_state_manager/tipos/tipos_reativos_page.dart';
 
 void main() {
@@ -31,6 +32,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/tiposReativos',
           page: () => TiposReativosPage(),
+        ),
+        GetPage(
+          name: '/tiposReativosGenericos',
+          page: () => TiposReativosGenericosPage(),
         ),
       ],
     );
