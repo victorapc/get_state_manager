@@ -51,6 +51,12 @@ class HomePage extends StatelessWidget {
                 Get.toNamed('/atualizacaoObjetos');
               },
             ),
+            ElevatedButtonCustom(
+              text: 'Controllers',
+              onPressed: () {
+                Get.toNamed('/controllers');
+              },
+            ),
           ],
         ),
       ),
