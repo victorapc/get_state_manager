@@ -71,7 +71,6 @@ class TiposObsPage extends StatelessWidget {
               text: 'Alterar Id',
               onPressed: () {
                 aluno['id'] = 3;
-                aluno.refresh();
               },
             ),
             ElevatedButtonCustom(
@@ -79,7 +78,6 @@ class TiposObsPage extends StatelessWidget {
               onPressed: () {
                 //jornadas.add('Jornada Dart');
                 jornadas.assign('Jornada Dart');
-                jornadas.refresh();
               },
             ),
             ElevatedButtonCustom(
