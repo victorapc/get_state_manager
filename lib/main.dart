@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_state_manager/basico/reatividade_page.dart';
 import 'package:get_state_manager/home_page.dart';
+import 'package:get_state_manager/tipos/tipos_obs_page.dart';
 import 'package:get_state_manager/tipos/tipos_reativos_genericos_nulos_page.dart';
 import 'package:get_state_manager/tipos/tipos_reativos_genericos_page.dart';
 import 'package:get_state_manager/tipos/tipos_reativos_page.dart';
@@ -41,6 +42,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/tiposReativosGenericosNulos',
           page: () => TiposReativosGenericosNulosPage(),
+        ),
+        GetPage(
+          name: '/tiposObs',
+          page: () => TiposObsPage(),
         ),
       ],
     );

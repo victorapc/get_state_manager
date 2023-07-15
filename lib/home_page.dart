@@ -39,6 +39,12 @@ class HomePage extends StatelessWidget {
                 Get.toNamed('/tiposReativosGenericosNulos');
               },
             ),
+            ElevatedButtonCustom(
+              text: 'Tipos Obs',
+              onPressed: () {
+                Get.toNamed('/tiposObs');
+              },
+            ),
           ],
         ),
       ),
