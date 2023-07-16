@@ -76,6 +76,12 @@ class HomePage extends StatelessWidget {
                   Get.toNamed('/workers');
                 },
               ),
+              ElevatedButtonCustom(
+                text: 'Firsy Rebuild',
+                onPressed: () {
+                  Get.toNamed('/firstRebuild');
+                },
+              ),
             ],
           ),
         ),
