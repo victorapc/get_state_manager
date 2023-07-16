@@ -12,58 +12,66 @@ class HomePage extends StatelessWidget {
         title: const Text('Home Page'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButtonCustom(
-              text: 'Básico Reatividade',
-              onPressed: () {
-                Get.toNamed('/basico');
-              },
-            ),
-            ElevatedButtonCustom(
-              text: 'Tipos Reativos',
-              onPressed: () {
-                Get.toNamed('/tiposReativos');
-              },
-            ),
-            ElevatedButtonCustom(
-              text: 'Tipos Reativos Genéricos',
-              onPressed: () {
-                Get.toNamed('/tiposReativosGenericos');
-              },
-            ),
-            ElevatedButtonCustom(
-              text: 'Tipos Reativos Genéricos Nulos',
-              onPressed: () {
-                Get.toNamed('/tiposReativosGenericosNulos');
-              },
-            ),
-            ElevatedButtonCustom(
-              text: 'Tipos Obs',
-              onPressed: () {
-                Get.toNamed('/tiposObs');
-              },
-            ),
-            ElevatedButtonCustom(
-              text: 'Atualização Objetos',
-              onPressed: () {
-                Get.toNamed('/atualizacaoObjetos');
-              },
-            ),
-            ElevatedButtonCustom(
-              text: 'Controllers',
-              onPressed: () {
-                Get.toNamed('/controllers');
-              },
-            ),
-            ElevatedButtonCustom(
-              text: 'GetX Widget',
-              onPressed: () {
-                Get.toNamed('/getxWidget');
-              },
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButtonCustom(
+                text: 'Básico Reatividade',
+                onPressed: () {
+                  Get.toNamed('/basico');
+                },
+              ),
+              ElevatedButtonCustom(
+                text: 'Tipos Reativos',
+                onPressed: () {
+                  Get.toNamed('/tiposReativos');
+                },
+              ),
+              ElevatedButtonCustom(
+                text: 'Tipos Reativos Genéricos',
+                onPressed: () {
+                  Get.toNamed('/tiposReativosGenericos');
+                },
+              ),
+              ElevatedButtonCustom(
+                text: 'Tipos Reativos Genéricos Nulos',
+                onPressed: () {
+                  Get.toNamed('/tiposReativosGenericosNulos');
+                },
+              ),
+              ElevatedButtonCustom(
+                text: 'Tipos Obs',
+                onPressed: () {
+                  Get.toNamed('/tiposObs');
+                },
+              ),
+              ElevatedButtonCustom(
+                text: 'Atualização Objetos',
+                onPressed: () {
+                  Get.toNamed('/atualizacaoObjetos');
+                },
+              ),
+              ElevatedButtonCustom(
+                text: 'Controllers',
+                onPressed: () {
+                  Get.toNamed('/controllers');
+                },
+              ),
+              ElevatedButtonCustom(
+                text: 'GetX Widget',
+                onPressed: () {
+                  Get.toNamed('/getxWidget');
+                },
+              ),
+              ElevatedButtonCustom(
+                text: 'Local State Widget',
+                onPressed: () {
+                  Get.toNamed('/localStateWidget');
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
