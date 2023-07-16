@@ -31,10 +31,18 @@ class WorkersController extends GetxController {
 
     // Vai ignorar sempre com um intervalo que você definir. Para cada x segundos,
     // executar alguma tarefa.
-    final intervalWorker = interval<String>(_nome, (nome) {
+    /*final intervalWorker = interval<String>(_nome, (nome) {
       debugPrint('Executando o worker ever: $nome');
     }, time: const Duration(seconds: 2));
-    _workers.add(intervalWorker);
+    _workers.add(intervalWorker);*/
+
+    // Pode ser usado para digitação, pois tem a finalidade de executar alguma
+    // tarefa quando termina de interagir com ela, como uma digitação. Pois caso
+    // estiver digitando e parar a digitação o método irá executar uma ação.
+    final debouncelWorker = debounce<String>(_nome, (nome) {
+      debugPrint('Executando o worker ever: $nome');
+    });
+    _workers.add(debouncelWorker);
 
     super.onInit();
   }
