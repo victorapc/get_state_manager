@@ -77,9 +77,15 @@ class HomePage extends StatelessWidget {
                 },
               ),
               ElevatedButtonCustom(
-                text: 'Firsy Rebuild',
+                text: 'First Rebuild',
                 onPressed: () {
                   Get.toNamed('/firstRebuild');
+                },
+              ),
+              ElevatedButtonCustom(
+                text: 'Get Builder',
+                onPressed: () {
+                  Get.toNamed('/getBuilder');
                 },
               ),
             ],

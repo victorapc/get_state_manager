@@ -6,6 +6,8 @@ import 'package:get_state_manager/controllers/controllers_home_page.dart';
 import 'package:get_state_manager/controllers/getxcontroller/controller_getx.dart';
 import 'package:get_state_manager/controllers/getxcontroller/getx_controller_example_page.dart';
 import 'package:get_state_manager/first_rebuild/first_rebuild_page.dart';
+import 'package:get_state_manager/get_builder/get_builder_controller/get_builder_controller.dart';
+import 'package:get_state_manager/get_builder/get_builder_page.dart';
 import 'package:get_state_manager/getx_widget/getx_widget_page.dart';
 import 'package:get_state_manager/home_page.dart';
 import 'package:get_state_manager/local_state_widget/local_state_widget_page.dart';
@@ -94,6 +96,11 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/firstRebuild',
           page: () => const FirstRebuildPage(),
+        ),
+        GetPage(
+          name: '/getBuilder',
+          binding: BindingsBuilder.put(() => GetBuilderController()),
+          page: () => const GetBuilderPage(),
         ),
       ],
     );
