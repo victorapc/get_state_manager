@@ -70,6 +70,12 @@ class HomePage extends StatelessWidget {
                   Get.toNamed('/localStateWidget');
                 },
               ),
+              ElevatedButtonCustom(
+                text: 'Workers',
+                onPressed: () {
+                  Get.toNamed('/workers');
+                },
+              ),
             ],
           ),
         ),

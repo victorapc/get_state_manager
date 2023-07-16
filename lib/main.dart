@@ -12,6 +12,8 @@ import 'package:get_state_manager/tipos/tipos_obs_page.dart';
 import 'package:get_state_manager/tipos/tipos_reativos_genericos_nulos_page.dart';
 import 'package:get_state_manager/tipos/tipos_reativos_genericos_page.dart';
 import 'package:get_state_manager/tipos/tipos_reativos_page.dart';
+import 'package:get_state_manager/workers/workers_page.dart';
+import 'package:get_state_manager/workers/workerscontroller/workers_controller.dart';
 
 void main() {
   runApp(const MyApp());
@@ -82,6 +84,11 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/localStateWidget',
           page: () => const LocalStateWidgetPage(),
+        ),
+        GetPage(
+          name: '/workers',
+          binding: BindingsBuilder.put(() => WorkersController()),
+          page: () => const WorkersPage(),
         ),
       ],
     );
