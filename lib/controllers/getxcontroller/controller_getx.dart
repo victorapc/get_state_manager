@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ControllerGetx extends GetxController {
-  final nome = 'Victor Alexandre'.obs;
+  final _nome = 'Victor Alexandre'.obs;
+
+  String get nome => _nome.value;
 
   @override
   void onInit() {
@@ -25,6 +27,6 @@ class ControllerGetx extends GetxController {
   void alterarDados() {
     //nome.value = 'Victor Alexandre P. de Carvalho';
     // ou
-    nome('Victor Alexandre P. de Carvalho');
+    _nome('Victor Alexandre P. de Carvalho');
   }
 }

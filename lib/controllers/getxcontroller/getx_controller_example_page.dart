@@ -30,12 +30,19 @@ class _GetxControllerExamplePageState extends State<GetxControllerExamplePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Obx(() {
-              return Text(Get.find<ControllerGetx>().nome.value);
+              return Text(Get.find<ControllerGetx>().nome);
             }),
             ElevatedButtonCustom(
               text: 'Alterar Dados',
               onPressed: () {
                 Get.find<ControllerGetx>().alterarDados();
+              },
+            ),
+            ElevatedButtonCustom(
+              text: 'Recarregar Dados',
+              onPressed: () {
+                Get.reload<ControllerGetx>();
+                setState(() {});
               },
             ),
           ],

@@ -61,7 +61,14 @@ class MyApp extends StatelessWidget {
           children: [
             GetPage(
               name: '/getxControllers',
-              binding: BindingsBuilder.put(() => ControllerGetx()),
+              //binding: BindingsBuilder.put(() => ControllerGetx()),
+              // Para exemplo de usar Get.reload() não pode usar o .put, nesse caso
+              // deverá usar o Get.lazyPut para fazer reload do controller. Pois o
+              // reload só funciona para fábricas e put já instancia o controller
+              // nesse exemplo, diferente do lazyPut.
+              binding: BindingsBuilder(() {
+                Get.lazyPut(() => ControllerGetx());
+              }),
               page: () => const GetxControllerExamplePage(),
             ),
           ],
