@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:get_state_manager/atualizacao/atualizacao_objetos_page.dart';
 import 'package:get_state_manager/basico/reatividade_page.dart';
 import 'package:get_state_manager/controllers/controllers_home_page.dart';
+import 'package:get_state_manager/controllers/full_life_cycle_controller/example_full_life_cycle_controller.dart';
+import 'package:get_state_manager/controllers/full_life_cycle_controller/example_full_life_cycle_page.dart';
 import 'package:get_state_manager/controllers/getxcontroller/controller_getx.dart';
 import 'package:get_state_manager/controllers/getxcontroller/getx_controller_example_page.dart';
 import 'package:get_state_manager/first_rebuild/first_rebuild_page.dart';
@@ -77,6 +79,12 @@ class MyApp extends StatelessWidget {
                 Get.lazyPut(() => ControllerGetx());
               }),
               page: () => const GetxControllerExamplePage(),
+            ),
+            GetPage(
+              name: '/fullLifeCycleController',
+              binding:
+                  BindingsBuilder.put(() => ExampleFullLifeCycleController()),
+              page: () => const ExampleFullLifeCyclePage(),
             ),
           ],
         ),
