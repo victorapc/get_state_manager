@@ -57,6 +57,12 @@ class HomePage extends StatelessWidget {
                 Get.toNamed('/controllers');
               },
             ),
+            ElevatedButtonCustom(
+              text: 'GetX Widget',
+              onPressed: () {
+                Get.toNamed('/getxWidget');
+              },
+            ),
           ],
         ),
       ),
