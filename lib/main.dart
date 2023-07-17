@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/mainStateMixin',
           binding: MainBindings(),
-          page: () => const MainStateMixin(),
+          page: () => MainStateMixin(),
         ),
         GetPage(
           name: '/basico',

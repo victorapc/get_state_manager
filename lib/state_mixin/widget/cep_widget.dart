@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:get_state_manager/state_mixin/model/cep_model.dart';
 
 class CepWidget extends StatelessWidget {
-  const CepWidget({super.key});
+  final CepModel? cepModel;
+
+  const CepWidget(this.cepModel, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        Text('CEP: '),
-        Text('Cidade: '),
-        Text('Rua: '),
-        Text('UF: '),
+        Text('CEP: ${cepModel?.cep ?? ''}'),
+        Text('Cidade: ${cepModel?.localidade ?? ''}'),
+        Text('Rua: ${cepModel?.logradouro ?? ''}'),
+        Text('UF: ${cepModel?.uf ?? ''}'),
       ],
     );
   }
