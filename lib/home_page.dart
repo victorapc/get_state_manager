@@ -17,6 +17,12 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButtonCustom(
+                text: 'State Mixin',
+                onPressed: () {
+                  Get.toNamed('/mainStateMixin');
+                },
+              ),
+              ElevatedButtonCustom(
                 text: 'Básico Reatividade',
                 onPressed: () {
                   Get.toNamed('/basico');
