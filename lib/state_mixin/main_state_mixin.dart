@@ -3,13 +3,15 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_state_manager/core/widget/elevated_button_custom.dart';
 //import 'package:get_state_manager/state_mixin/pages/main_controller.dart';
-import 'package:get_state_manager/state_mixin/pages/main_controller_state_mixin.dart';
+//import 'package:get_state_manager/state_mixin/pages/main_controller_state_mixin.dart';
+import 'package:get_state_manager/state_mixin/pages/main_super_controller.dart';
 import 'package:get_state_manager/state_mixin/widget/cep_widget.dart';
 //import 'package:get_state_manager/state_mixin/widget/cep_widget.dart';
 
 class MainStateMixin extends StatelessWidget {
   //final controller = Get.find<MainController>();
-  final controller = Get.find<MainControllerStateMixin>();
+  //final controller = Get.find<MainControllerStateMixin>();
+  final controller = Get.find<MainSuperController>();
 
   MainStateMixin({super.key});
 
