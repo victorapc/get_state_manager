@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_state_manager/core/widget/elevated_button_custom.dart';
-import 'package:get_state_manager/state_mixin/pages/main_controller.dart';
+//import 'package:get_state_manager/state_mixin/pages/main_controller.dart';
+import 'package:get_state_manager/state_mixin/pages/main_controller_state_mixin.dart';
 import 'package:get_state_manager/state_mixin/widget/cep_widget.dart';
+//import 'package:get_state_manager/state_mixin/widget/cep_widget.dart';
 
 class MainStateMixin extends StatelessWidget {
-  final controller = Get.find<MainController>();
+  //final controller = Get.find<MainController>();
+  final controller = Get.find<MainControllerStateMixin>();
 
   MainStateMixin({super.key});
 
@@ -24,6 +28,11 @@ class MainStateMixin extends StatelessWidget {
                 onChanged: (value) {
                   controller.cepSearch = value;
                 },
+                keyboardType: const TextInputType.numberWithOptions(
+                    signed: false, decimal: false),
+                inputFormatters: <TextInputFormatter>[
+                  FilteringTextInputFormatter.digitsOnly,
+                ],
               ),
               ElevatedButtonCustom(
                 text: 'Buscar',
@@ -34,7 +43,16 @@ class MainStateMixin extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Obx(() {
+              controller.obx(
+                (state) => CepWidget(state),
+                onEmpty: const Text('Nenhum CEP encontrado na busca.'),
+                onLoading: const Text('Carregando...'),
+                onError: (error) => const Text(
+                  'Erro ao buscar o CEP.',
+                  style: TextStyle(color: Colors.red),
+                ),
+              ),
+              /*Obx(() {
                 return Visibility(
                   visible: controller.loading,
                   child: const Center(
@@ -53,7 +71,7 @@ class MainStateMixin extends StatelessWidget {
                   visible: !controller.loading && !controller.isError,
                   child: CepWidget(controller.cep),
                 );
-              }),
+              }),*/
             ],
           ),
         ),
