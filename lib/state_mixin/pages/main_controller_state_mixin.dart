@@ -23,10 +23,18 @@ class MainControllerStateMixin extends GetxController
       // Adiciona um delay de 1 segundo.
       await 1.seconds.delay();
 
-      final cep = await _repository.getCep(_cepSearch.value);
+      final cep = await _findAdressRepository();
       change(cep, status: RxStatus.success());
     } catch (e) {
       change(state, status: RxStatus.error());
     }
   }
+
+  Future<void> findAdress2() async {
+    change(state, status: RxStatus.loading());
+    append(() => _findAdressRepository);
+  }
+
+  Future<CepModel> _findAdressRepository() async =>
+      await _repository.getCep(_cepSearch.value);
 }

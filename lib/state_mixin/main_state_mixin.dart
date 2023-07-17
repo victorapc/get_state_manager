@@ -40,6 +40,12 @@ class MainStateMixin extends StatelessWidget {
                   controller.findAdress();
                 },
               ),
+              ElevatedButtonCustom(
+                text: 'Buscar 2',
+                onPressed: () {
+                  controller.findAdress2();
+                },
+              ),
               const SizedBox(
                 height: 20,
               ),
